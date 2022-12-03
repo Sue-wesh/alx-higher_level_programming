@@ -1,5 +1,2 @@
-#!/usr/bin/python3
-a = "Hello"
-b = "World"
-c = a + b
-print(c)
+#!/bin/bash
+python3 -c "import py_compile; py_compile.compile('$PYFILE', '$PYFILE' + 'c')"
