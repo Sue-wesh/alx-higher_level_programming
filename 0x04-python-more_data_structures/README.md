@@ -4,3 +4,5 @@ function that computes the square value of all integers of a matrix
 function that replaces all occurrences of an element by another in a new list
 2. Unique addition
 function that adds all unique integers in a list (only once for each integer
+3. Present in both
+function that returns a set of common elements in two sets
