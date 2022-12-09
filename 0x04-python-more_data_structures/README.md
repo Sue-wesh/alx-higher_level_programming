@@ -8,3 +8,10 @@ function that adds all unique integers in a list (only once for each integer
 function that returns a set of common elements in two sets
 4. Only differents
 function that returns a set of all elements present in only one set
+5. Number of keys
+function that returns the number of keys in a dictionary
+6. Print sorted dictionary
+function that prints a dictionary by ordered keys
+7. Update dictionary
+function that replaces or adds key/value in a dictionary
+
