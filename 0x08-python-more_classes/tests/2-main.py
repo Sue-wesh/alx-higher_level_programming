@@ -3,7 +3,7 @@
 Rectangle = __import__('2-rectangle').Rectangle
 
 rect = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(rect.area, rect.perimeter))
+print("Area: {} - Perimeter: {}".format(rect.area(), rect.perimeter()))
 
 rect.width = 10
 rect.height = 3
