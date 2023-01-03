@@ -7,17 +7,19 @@ class Rectangle:
     """represent a rectangle"""
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
-    
-    """getter for width"""
+        """initialize a new rectangle with arguments:
+        width initialized at 0
+        height initialized at 0
+        """
 
+        self.width = width
+        self.height = height
+    
     @property
     def width(self):
+        """get width of rectangle"""
         return (self.__width)
     
-    """setter for width"""
-
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -28,14 +30,11 @@ class Rectangle:
 
         self.__width = value
     
-    """getter for height"""
-
     @property
     def height(self):
+        """get height of the rectangle"""
         return (self.__height)
     
-    """setter for height"""
-
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
