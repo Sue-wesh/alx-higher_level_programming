@@ -5,7 +5,7 @@ How to Use 2-matrix_divided.py
 matrix_divided() divides all elements of a matrix with a constant element
 
 ::
-    >>> matrix_divided = __import__('2-matrix_divided.py').matrix_divided
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
     >>> matrix = [
     ...     [1, 2, 3],
     ...     [4, 5, 6]
