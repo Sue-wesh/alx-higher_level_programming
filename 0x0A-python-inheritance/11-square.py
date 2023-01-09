@@ -9,6 +9,6 @@ class Square(Rectangle):
     def __init__(self, size):
         """instates with private attr size"""
         
-        self.integer_validator
+        self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
