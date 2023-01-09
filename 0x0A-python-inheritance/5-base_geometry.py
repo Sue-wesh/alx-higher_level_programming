@@ -1,5 +1,4 @@
-#/usr/bin/python3
-# 5-base_geometry.py
+#!/usr/bin/python3
 
 """defines an empty class BaseGeometry"""
 
