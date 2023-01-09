@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 
 """
 defines lookup function that returns a lits of attributes and methods of an object
