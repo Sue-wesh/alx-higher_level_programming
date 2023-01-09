@@ -1,0 +1,31 @@
+=============================
+How to Use 7-base_geometry.py
+=============================
+
+This module defines a class (BaseGeometry) 
+it has public instance methods def area(self) and def integer_validator(self, name, value)
+raises an exception in def area(self)
+raises an exception in def integer_validator(self, name, value) if
+value is not an int and less than or equal to 0
+
+::
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    
+::
+    >>> geo = BaseGeometry()
+    >>> geo.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+::
+    >>> geo.integer_validator("some name", "one")
+    Traceback (most recent call last):
+    TypeError: some name must be an integer
+
+::
+    >>> geo.integer_validator("some name", -3)
+    Traceback (most recent call last):
+    ValueError: some name must be greater than 0
+
+::
+    >>> geo.integer_validator(7, 5)
