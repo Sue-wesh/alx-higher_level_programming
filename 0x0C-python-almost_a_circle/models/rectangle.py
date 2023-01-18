@@ -28,7 +28,6 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    """height getter method"""
     def height(self):
         return self.__height
 
