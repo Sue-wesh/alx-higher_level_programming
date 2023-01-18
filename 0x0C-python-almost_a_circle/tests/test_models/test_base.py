@@ -2,29 +2,32 @@
 
 """defines unit tests for base.py."""
 
+import os
 import unittest
 from models.base import Base
 
+
 class TestBaseInstatiation(unittest.TestCase):
+    """test instatiation of the Base class."""
 
     def test_baseOneTwo(self):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
-    
-    def test_baseOneThree(self):
-        b1 = Base()
-        b2 = Base()
-        b3 = Base()
-        self.assertEqual(b1.id, b3.id - 2)
 
-    def test_No_id(self):
+    def test_None_id(self):
         b1 = Base(None)
         b2 = Base(None)
         self.assertEqual(b1.id, b2.id - 1)
     
     def test_with_id(self):
         self.assertEqual(12, Base(12).id)
+    
+    def test_baseOneThree(self):
+        b1 = Base()
+        b2 = Base(10)
+        b3 = Base()
+        self.assertEqual(b1.id, b3.id - 1)
 
     def test_nb_instances(self):
         with self.assertRaises(AttributeError):

@@ -11,7 +11,7 @@ from models.rectangle import Rectangle
 class TestRectangle_Instatiate(unittest.TestCase):
     """different test cases"""
     def test_inheritannce(self):
-        self.assertEqual(Rectangle(3, 4, 1, 2, 10).id, Base().id)
+        self.assertEqual(Rectangle(3, 4, 1, 2, 5).id, Base(5).id)
     
     def test_no_args(self):
         with self.assertRaises(TypeError):
