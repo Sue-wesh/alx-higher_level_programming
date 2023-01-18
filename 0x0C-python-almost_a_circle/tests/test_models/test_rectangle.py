@@ -186,8 +186,9 @@ class Test_area(unittest.TestCase):
 
 
 class TestRectangle_stdout(unittest.TestCase):
-    """unittest for testing display"""
-
+    """unittest for testing display and str methods"""
+    
+    @staticmethod
     def printToStdout(rect, meth):
         """returns text printed to stdout
         Args:
@@ -195,12 +196,41 @@ class TestRectangle_stdout(unittest.TestCase):
         meth (method)
         """
 
-        std_out = io.StringIO()
-        sys.stdout = std_out
+        stdOut = io.StringIO()
+        sys.stdout = stdOut
         if meth == "print":
             print(rect)
         else:
             rect.display()
         sys.stdout = sys.__stdout__
+        return stdOut
 
-        return std_out
+    def test_str_WidthHeight(self):
+        r = Rectangle(4, 6)
+        stdOut = TestRectangle_stdout.printToStdout(r, "print")
+        correct = "[Rectangle] ({}) 0/0 - 4/6\n".format(r.id)
+        self.assertEqual(correct, stdOut.getvalue())
+
+    def test_str_WidthHeight_X(self):
+        r = Rectangle(5, 5, 1)
+        correct = "[Rectangle] ({}) 1/0 - 5/5".format(r.id)
+        self.assertEqual(correct, r.__str__())
+
+    def test_str_WidthHeight_X_Y(self):
+        r = Rectangle(1, 8, 2, 4)
+        correct = "[Rectangle] ({}) 2/4 - 1/8".format(r.id)
+        self.assertEqual(correct, str(r))
+
+    def test_str_WidthHeight_X_Y_id(self):
+        r = Rectangle(13, 21, 2, 4, 7)
+        self.assertEqual("[Rectangle] (7) 2/4 - 13/21", str(r))
+
+    def test_str_one(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        with self.assertRaises(TypeError):
+            r.__str__(1)
+
+    def test_display(self):
+        r = Rectangle(2, 3, 0, 0, 0)
+        stdOut = TestRectangle_stdout.printToStdout(r, "display")
+        self.assertEqual("##\n##\n##\n", stdOut.getvalue())
