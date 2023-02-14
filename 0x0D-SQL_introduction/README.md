@@ -25,6 +25,8 @@ The database name will be passed as an argument of the mysql command
 If the table first-table already exists, your script should not fail
 
 5. Full description
-script that prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL server
+script that prints the full description of the table first-table from the database hbtn-0c-0 in your MySQL server
 
-
+6. List all in table
+all rows of the table first-table
+All fields should be printed
