@@ -8,3 +8,10 @@ script that creates the database hbtn-0c-0 in your MySQL server.
 
 If the database hbtn-0c-0 already exists, your script should not fail
 You are not allowed to use the SELECT or SHOW statements
+
+2. Delete a database
+delete database hbtn-0c-0
+if it doesn’t exist, your script should not fail
+
+3. List tables
+script that lists all the tables of a database in your MySQL server.
