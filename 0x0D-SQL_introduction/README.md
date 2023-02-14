@@ -64,4 +64,25 @@ script that lists the number of records with the same score in the table
 16. Say my name
 script that lists all records of the table
 
+17. Go to UTF8
+script that converts hbtn-0c-0 database to UTF8
+You need to convert all of the following to UTF8:
 
+Database  hbtn-0c-0
+Table first-table
+field name in first-table
+
+18. Temperatures #0
+Import in hbtn-0c-0 database this table dump: download
+
+Write a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
+
+19. Temperatures #1
+Import in hbtn-0c-0 database this table dump: download (same as Temperatures #0)
+
+Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+
+20. Temperatures #2
+Import in hbtn-0c-0 database this table dump: download (same as Temperatures #0)
+
+Write a script that displays the max temperature of each state (ordered by State name)
