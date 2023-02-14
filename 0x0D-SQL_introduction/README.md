@@ -36,3 +36,7 @@ insert a a new row in the table first-table
 
 8. Count 89
 number of records with id = 89 in the table first-table
+
+9. Full creation
+create a table second-_table in the database hbtn-_0c-_0
+If the table second_table already exists, your script should not fail
