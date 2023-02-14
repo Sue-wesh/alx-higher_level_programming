@@ -40,3 +40,8 @@ number of records with id = 89 in the table first-table
 9. Full creation
 create a table second-_table in the database hbtn-_0c-_0
 If the table second_table already exists, your script should not fail
+
+10. List by best
+script that lists all records of the table second-table
+Results should display both the score and the name (in this order)
+Records should be ordered by score (top first)
