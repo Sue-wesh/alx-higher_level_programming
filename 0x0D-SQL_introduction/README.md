@@ -45,3 +45,8 @@ If the table second_table already exists, your script should not fail
 script that lists all records of the table second-table
 Results should display both the score and the name (in this order)
 Records should be ordered by score (top first)
+
+11. Select the best
+script that lists all records with a score >= 10 in the table secondtable
+
+
