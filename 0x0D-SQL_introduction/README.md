@@ -33,3 +33,6 @@ All fields should be printed
 
 7. First add
 insert a a new row in the table first-table
+
+8. Count 89
+number of records with id = 89 in the table first-table
