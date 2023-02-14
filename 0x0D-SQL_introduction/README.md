@@ -55,4 +55,13 @@ script that updates the score of Bob to 10 in the table secondtable
 13. Score too low
 script that removes all records with a score <= 5 in the table second_-table
 
+14. Average
+script that computes the score average of all records in the table
+
+15. Number by score
+script that lists the number of records with the same score in the table
+
+16. Say my name
+script that lists all records of the table
+
 
