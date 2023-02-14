@@ -30,3 +30,6 @@ script that prints the full description of the table first-table from the databa
 6. List all in table
 all rows of the table first-table
 All fields should be printed
+
+7. First add
+insert a a new row in the table first-table
