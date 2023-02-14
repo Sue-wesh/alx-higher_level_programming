@@ -49,4 +49,5 @@ Records should be ordered by score (top first)
 11. Select the best
 script that lists all records with a score >= 10 in the table secondtable
 
-
+12. Cheating is bad
+script that updates the score of Bob to 10 in the table secondtaabe
