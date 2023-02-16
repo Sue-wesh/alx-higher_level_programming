@@ -63,4 +63,10 @@ Each record should display: cities.id - cities.name - states.name
 Results must be sorted in ascending order by cities.id
 You can use only one SELECT statement
 
+10. Genre ID by show
+Import the database dump from hbtn-0d-tvshows to your MySQL server:
+script that lists all shows contained in hbtn-0d-tvshows that have at least one genre linked
+Each record should display: tv-shows.title - tv-show-genres.genre-id
+Results must be sorted in ascending order by tv-shows.title and tv-show-genre.genre-id
+
 
