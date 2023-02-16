@@ -69,4 +69,33 @@ script that lists all shows contained in hbtn-0d-tvshows that have at least one 
 Each record should display: tv-shows.title - tv-show-genres.genre-id
 Results must be sorted in ascending order by tv-shows.title and tv-show-genre.genre-id
 
+11. Genre ID for all shows
+Import the database dump of hbtn-0d-tvshows to your MySQL server
+script that lists all shows contained in the database hbtn-0d-tvshows
+Each record should display: tv-show.title - tv-show-genres-id
+Results must be sorted in ascending order by tv-show.title, tv-show-genres-id
+If a show doesn’t have a genre, display NULL
+
+12. No genre
+Import the database dump of hbtn-0d-tvshows to your MySQL server
+script that lists all genres contained in the database hbtn-0d-tvshows without a genre linked
+Each record should display: tv-show.title - tv-show-genres-id
+Results must be sorted in ascending order by tv-show.title, tv-show-genres-id
+
+13. Number of shows by genre
+Import the database dump of hbtn-0d-tvshows to your MySQL server
+script that lists all genres contained in the database hbtn-0d-tvshows and the no of shows
+Each record should display: <TV Show genre> - <Number of shows linked to this genre>
+First column must be called genre
+Second column must be called number-of-shows
+Don’t display a genre that doesn’t have any shows linked
+Results must be sorted in descending order by the number of shows linked
+
+14. My genres
+Import the database dump of hbtn-0d-tvshows to your MySQL server
+script that uses hbtn-0d-tvshows database to list all genres of the show Dexter 
+the t-show table contains only one record where title = Dexter
+Each record should display: tv-genres.name
+Results must be sorted in ascending order by the genre name
+
 
