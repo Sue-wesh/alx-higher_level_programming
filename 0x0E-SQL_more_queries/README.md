@@ -110,5 +110,15 @@ If a show doesn’t have a genre, display NULL in the genre column
 Each record should display: tv-shows.title - tv-genres.name
 Results must be sorted in ascending order by the show title and genre name
 
+17. Not my genre
+list all genres not linked to the show Dexter
 
+18. No Comedy tonight!
+script that lists all shows without the genre Comedy in DB
+
+19. Rotten tomatoes
+lists all shows by their rating
+
+20. Best genre
+script that lists all genres in the database by their rating
 
