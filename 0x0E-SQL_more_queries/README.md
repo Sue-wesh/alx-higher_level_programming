@@ -52,4 +52,15 @@ id INT unique, auto generated, can’t be null and is a primary key
 state-id INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
 name VARCHAR(256) can’t be null
 
+8. Cities of California
+lists all the cities of California that can be found in the database
+The states table contains only one record where name = California
+Results must be sorted in ascending order by cities.id
+
+9. Cities by States
+lists all cities contained in the database
+Each record should display: cities.id - cities.name - states.name
+Results must be sorted in ascending order by cities.id
+You can use only one SELECT statement
+
 
