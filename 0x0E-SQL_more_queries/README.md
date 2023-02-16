@@ -98,4 +98,17 @@ the t-show table contains only one record where title = Dexter
 Each record should display: tv-genres.name
 Results must be sorted in ascending order by the genre name
 
+15. Only Comedy
+script that lists all Comedy shows in the database hbtn-0d-tvshows
+The tv-genres table contains only one record where name = Comedy
+Each record should display: tv-shows.title
+Results must be sorted in ascending order by the show title
+
+16. List shows and genres
+script that lists all shows, and all genres linked to that show, from the database hbtn-0d-tvshows
+If a show doesn’t have a genre, display NULL in the genre column
+Each record should display: tv-shows.title - tv-genres.name
+Results must be sorted in ascending order by the show title and genre name
+
+
 
