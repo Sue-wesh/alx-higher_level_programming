@@ -25,3 +25,18 @@ id INT
 name VARCHAR(256) can’t be null
 The database name will be passed as an argument of the mysql command
 If the table force-name already exists, your script should not fail
+
+4. ID can't be null
+script that creates the table id-not-null 
+id INT with the default value 1
+name VARCHAR(256)
+if already exists, your script should not fail
+
+5. Unique ID
+script that creates the table unique-id
+description:
+id INT with the default value 1 and must be unique
+name VARCHAR(256)
+already exists, your script should not fail
+
+
