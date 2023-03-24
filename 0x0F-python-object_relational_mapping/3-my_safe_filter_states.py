@@ -15,9 +15,8 @@ if __name__ == '__main__':
                  db=argv[3], host="localhost", port=3306)
     query = db.cursor()
     state = argv[4]
-    search = "SELECT * FROM states WHERE name='{}' ORDER BY states.id ASC"
-    search.format(state)
-    query.execute(search)
+    search = "SELECT * FROM states WHERE name LIKE %s ORDER BY states.id ASC"
+    query.execute(search, [state])
     [print(state) for state in query.fetchall()]
     
     query.close()
