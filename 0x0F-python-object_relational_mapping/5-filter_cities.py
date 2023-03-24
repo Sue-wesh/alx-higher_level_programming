@@ -1,13 +1,20 @@
 #!/usr/bin/python3
-# list all cities of a certain state from the database hbtn_0e_4_usa
-import sys
-import MySQLdb
+"""
+list all cities of a certain state from the database hbtn_0e_4_usa
+"""
+from sys import argv
+from MySQLdb import connect
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-                         db=sys.argv[3], host="localhost", port=3306)
+    db = connect(user=argv[1], passwd=argv[2],
+                 db=argv[3], host="localhost", port=3306)
     c = db.cursor()
-    c.execute("SELECT cities.id, cities.name FROM cities INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id")
+    state = argv[4]
+    search = ("SELECT cities.name FROM cities JOIN states \
+            ON cities.state_id = states.id \
+            WHERE states.name = %s \
+            ORDER BY cities.id ASC")
+    c.execute(search, (state,))
     [print(city) for city in c.fetchall()]
 
     c.close()
