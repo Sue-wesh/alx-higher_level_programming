@@ -4,14 +4,18 @@
 #                   <mysql password> \
 #                   <database name> \
 #                   <state name searched>
-import sys
-import MySQLdb
+from sys import argv
+from MySQLdb import connect
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    db = connect(user=argv[1], passwd=argv[2], db=argv[3]
+                 host="localhost", port=3306)
     c = db.cursor()
-    state_name = sys.argv[4]
-    search = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC"
-    search = search.format(state_name)
+    state = argv[4]
+    search = "SELECT * FROM states WHERE name='{}' ORDER BY states.id ASC"
+    search = search.format(state)
     c.execute(search)
     [print(state) for state in c.fetchall()]
+
+    c.close()
+    db.close()
