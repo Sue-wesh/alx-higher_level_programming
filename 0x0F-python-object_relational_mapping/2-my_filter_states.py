@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """
 display all values in the states table where name matches the argument
-takes 4 arguments <mysql username> \
-                   <mysql password> \
-                   <database name> \
-                   <state name searched>
+takes 4 arguments
 """
 from sys import argv
 from MySQLdb import connect
 
 if __name__ == "__main__":
-    db = connect(user=argv[1], passwd=argv[2], db=argv[3], 
+    """
+    arguments are <mysql username>, <mysql password>, <database name> and 
+    <state name searched>
+    """
+    db = connect(user=argv[1], passwd=argv[2], db=argv[3],
                  host="localhost", port=3306)
     c = db.cursor()
     state = argv[4]
