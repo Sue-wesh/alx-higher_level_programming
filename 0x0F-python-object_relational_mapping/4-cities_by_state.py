@@ -13,9 +13,7 @@ if __name__ == '__main__':
             FROM cities INNER JOIN states \
             ON cities.state_id = states.id \
             ORDER BY cities.id ASC"
-    
     c.execute(search)
-    
     for city in c.fetchall():
         print(city)
 
