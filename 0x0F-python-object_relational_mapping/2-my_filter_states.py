@@ -11,9 +11,9 @@ if __name__ == "__main__":
     db = connect(user=argv[1], passwd=argv[2],
                  db=argv[3], host="localhost", port=3306)
     c = db.cursor()
-    stat = argv[4]
-    search = "SELECT * FROM states WHERE name='{}' ORDER BY states.id".format(stat)
-    c.execute(search)
+    st = argv[4]
+    sech = "SELECT * FROM states WHERE name='{}' ORDER BY states.id".format(st)
+    c.execute(sech)
     [print(state) for state in c.fetchall()]
 
     c.close()
