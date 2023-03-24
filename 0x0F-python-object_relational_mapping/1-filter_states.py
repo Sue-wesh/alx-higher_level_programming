@@ -11,6 +11,7 @@ if __name__ == "__main__":
                  db=argv[3], host="localhost", port=3306)
     c = db.cursor()
     c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
-    [print(state) for state in c.fetchall()]
+    for state in c.fetchall():
+        print(state)
     c.close()
     db.close()
