@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-# display all values in the states table where name matches the argument
-# takes 4 arguments <mysql username> \
-#                   <mysql password> \
-#                   <database name> \
-#                   <state name searched>
+"""
+display all values in the states table where name matches the argument
+takes 4 arguments <mysql username> \
+                   <mysql password> \
+                   <database name> \
+                   <state name searched>
+"""
 from sys import argv
 from MySQLdb import connect
 
