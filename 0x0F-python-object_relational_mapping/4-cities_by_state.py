@@ -12,7 +12,7 @@ if __name__ == '__main__':
     search = "SELECT cities.id, cities.name, states.name
     FROM cities INNER JOIN states
     ON cities.states_id = states.id
-    ORDER BY states_id"
+    ORDER BY cities.id ASC"
     c.execute(search)
     for city in c.fetchall():
         print(city)
