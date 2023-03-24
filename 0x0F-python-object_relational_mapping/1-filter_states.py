@@ -14,5 +14,5 @@ if __name__ == "__main__":
     for state in query.fetchall():
         print(state)
 
-    c.close()
+    query.close()
     db.close()
