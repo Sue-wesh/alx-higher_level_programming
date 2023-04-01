@@ -1,4 +1,5 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
+# Python script that fetches url
 import urllib.request
 
 if __name__ == "__main__":
