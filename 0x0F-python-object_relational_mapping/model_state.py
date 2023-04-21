@@ -6,7 +6,10 @@ and an instance Base = declarative_base()
 
 from sqlalchemy import create_engine, Column, String, Integer, MetaData
 from sqlalchemy.ext.declarative import declarative_base
-
+"""
+python file that contains the class definition of a State
+and an instance Base = declarative_base()
+"""
 meta = MetaData()
 Base = declarative_base(metadata=meta)
 
