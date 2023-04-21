@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all State objects, and corresponding City objects, contained in the database
+lists all State objects, and corresp...City objects, contained in the database
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, relationship
