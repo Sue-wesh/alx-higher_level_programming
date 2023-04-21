@@ -3,8 +3,8 @@
 City class:
     No change
 State class:
-    class attribute cities must represent a relationship with the class City. 
-    If the State object is deleted, all linked City objects must be automatically 
+    class attribute cities must represent a relationship with the class City.
+    If State object is deleted, all linked City objects must be automatically
     deleted
 """
 from relationship_state import State, Base
