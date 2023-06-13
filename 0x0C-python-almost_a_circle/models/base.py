@@ -10,7 +10,6 @@ class Base:
     Goal---
     To manage id attribute in all future classes and
     and avoid duplicating the same code
-    
     private class attribute __nb_objects = 0
     """
 
@@ -19,7 +18,7 @@ class Base:
     def __init__(self, id=None):
         """
         initialize the base class.
-        if id is not None, assign the public instance attribute id with this argument value 
+        if id is not None, assign the public instance attribute id with this argument value
         otherwise increment __nb_objects and assign the new value to the public instance attribute id
         """
 
@@ -28,7 +27,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """the JSON string representation of list_dictionaries
@@ -37,7 +36,7 @@ class Base:
         else
         return the JSON string representation of list_dictionaries.
         """
-        
+
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
@@ -73,13 +72,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-    """return an instance with all attributes already set
-    use the method def update(self, *args, **kwargs)
-    """
-    if dictionary and dictionary != {}:
-        if cls.__name__ = "Rectangle":
-            new = cls(1, 1)
-        else:
-            new = cls(1)
-        new.update(**dictionary)
-        return new
+        """return an instance with all attributes already set
+        use the method def update(self, *args, **kwargs)
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
