@@ -18,8 +18,10 @@ class Base:
     def __init__(self, id=None):
         """
         initialize the base class.
-        if id is not None, assign the public instance attribute id with this argument value
-        otherwise increment __nb_objects and assign the new value to the public instance attribute id
+        if id is not None, assign the public instance attribute id with
+        this argument value
+        otherwise increment __nb_objects and assign the new value to the
+        public instance attribute id
         """
 
         if id is not None:
