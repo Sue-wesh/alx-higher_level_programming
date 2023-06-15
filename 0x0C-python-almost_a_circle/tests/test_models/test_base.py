@@ -7,13 +7,20 @@ import unittest
 from models.base import Base
 
 
-class TestBaseInstatiation(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """test instatiation of the Base class."""
 
     def test_baseid(self):
+        """
+        test base() for assigning id automatically
+        """
         b1 = Base()
         b2 = Base()
+        self.assertTrue(b1.id, 1)
         self.assertEqual(b1.id, b2.id - 1)
+
+        b3 = Base(85)
+        self.assertTrue(b3.id, 85)
 
     def test_None_id(self):
         b1 = Base(None)
