@@ -4,6 +4,7 @@
 
 import os
 import unittest
+import json
 from models.base import Base
 
 
@@ -49,3 +50,13 @@ class TestBase(unittest.TestCase):
     def test_two_args(self):
         with self.assertRaises(TypeError):
             Base(1, 2)
+
+    def test_to_json_string(self):
+        """test base to json string"""
+        self.assertEqual(Base.to_json_string(None), "[]")
+        self.assertEqual(Base.to_json_string([]), "[]")
+        dict1 = {'id': 2, 'width': 3, 'height': 4, 'x':2, 'y': 4}
+        dict2 = {'id': 6, 'width': 6, 'height': 8, 'x':4, 'y': 8}
+        jsonize = Base.to_json_string([dict1, dict2])
+        dict3 = json.loads(jsonize)
+        self.assertEqual(dict3, [dict1, dict2])
