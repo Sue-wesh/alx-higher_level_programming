@@ -60,3 +60,7 @@ class TestBase(unittest.TestCase):
         jsonize = Base.to_json_string([dict1, dict2])
         dict3 = json.loads(jsonize)
         self.assertEqual(dict3, [dict1, dict2])
+
+    def test_from_json_string(self):
+        """test base from json string"""
+        self.assertEqual(Base.from_json_string(None), [])
