@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """represents a class Rectangle."""
 
@@ -74,13 +75,13 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             print("")
             return
-        
+
         [print("") for y in range(self.y)]
         for h in range(self.height):
             [print(" ", end="") for x in range(self.x)]
             [print("#", end="") for w in range(self.width)]
             print("")
-    
+
     def update(self, *args, **kwargs):
         """update the rectangle
         *args - no-keyworded arguments
@@ -132,6 +133,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """return the __str__ representation of Rectangle."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, 
-                                                       self.x, self.y, 
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
                                                        self.width, self.height)
