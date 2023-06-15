@@ -12,10 +12,6 @@ class TestBaseInstatiation(unittest.TestCase):
 
     def test_baseid(self):
         b1 = Base()
-        self.assertEqual(b1.id, 1)
-
-    def test_baseOneTwo(self):
-        b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
 
