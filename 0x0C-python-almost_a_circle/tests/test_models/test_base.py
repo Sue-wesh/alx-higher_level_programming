@@ -6,7 +6,7 @@ import os
 import unittest
 import json
 from models.base import Base
-
+from models.rectangle import Rectangle
 
 class TestBase(unittest.TestCase):
     """test instatiation of the Base class."""
@@ -64,3 +64,14 @@ class TestBase(unittest.TestCase):
     def test_from_json_string(self):
         """test base from json string"""
         self.assertEqual(Base.from_json_string(None), [])
+
+    def test_rectangle(self):
+        """test of rectangle exists"""
+        rect1 = Rectangle(10, 2)
+        self.assertEqual(rect1.id, 7)
+
+        rect2 = Rectangle(2, 10)
+        self.assertEqual(rect1.id, rect2.id - 1)
+
+        rect3 = Rectangle(10, 2, 0, 0, 12)
+        self.assertEqual(rect3.id, 12)
