@@ -10,6 +10,10 @@ from models.base import Base
 class TestBaseInstatiation(unittest.TestCase):
     """test instatiation of the Base class."""
 
+    def test_baseid(self):
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
+
     def test_baseOneTwo(self):
         b1 = Base()
         b2 = Base()
