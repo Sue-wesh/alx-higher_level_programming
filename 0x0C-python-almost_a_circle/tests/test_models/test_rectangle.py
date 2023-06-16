@@ -13,7 +13,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_id(self):
         """test of rectangle ids"""
-        Base.__Base__nb_objects = 0
+        Base._Base__nb_objects = 0
 
         rect1 = Rectangle(10, 2)
         rect2 = Rectangle(2, 10)
