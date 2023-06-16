@@ -13,9 +13,11 @@ class TestRectangle(unittest.TestCase):
 
     def test_id(self):
         """test of rectangle ids"""
-        Base._Base__nb_objects = 0
+        Base.__nb_objects = 0
 
         rect1 = Rectangle(10, 2)
+        self.assertEqual(rect1.id, 11)
+        
         rect2 = Rectangle(2, 10)
         self.assertEqual(rect1.id, rect2.id - 1)
 
