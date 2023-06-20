@@ -3,6 +3,7 @@
 """define a class Square that inherits from the class Rectangle."""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """represents a Square.
     .. it inherits from Rectangle
@@ -11,7 +12,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """initialize size, x, y and id for a new Square."""
-        
+
         super().__init__(size, size, x, y, id)
 
     @property
@@ -25,7 +26,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """assigns attributes 
+        """assigns attributes
         *args - list of no-keyworded arguments
         **kwargs - keywrded arquments
         **kwargs is skipped is *args exists and is not empty
@@ -70,4 +71,7 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.width)
