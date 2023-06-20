@@ -100,7 +100,7 @@ class Rectangle(Base):
                 elif a == 2:
                     self.height = arg
                 elif a == 3:
-                    self.x = x
+                    self.x = arg
                 elif a == 4:
                     self.y = arg
                 a += 1

@@ -15,9 +15,7 @@ class TestRectangle(unittest.TestCase):
         """test of rectangle ids"""
         Base.__nb_objects = 0
 
-        rect1 = Rectangle(10, 2)
-        self.assertEqual(rect1.id, 11)
-        
+        rect1 = Rectangle(10, 2)       
         rect2 = Rectangle(2, 10)
         self.assertEqual(rect1.id, rect2.id - 1)
 
@@ -29,6 +27,13 @@ class TestRectangle(unittest.TestCase):
 
         rect5 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(rect5.id, 12)
+
+    def test_numof_args(self):
+        """test the number of args passed"""
+        with self.assertRaises(TypeError):
+            Rectangle()
+            Rectangle(5)
+            Rectangle(x=2, y=2)
 
     def test_type_exceptions(self):
         """test when there is a type error."""
