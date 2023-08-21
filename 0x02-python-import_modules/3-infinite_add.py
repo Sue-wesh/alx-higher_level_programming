@@ -6,4 +6,4 @@ if __name__ == "__main__":
 
     for i in argv[1:]:
         summ += int(i)
-        print("{:d}".format(summ))
+    print("{:d}".format(summ))
